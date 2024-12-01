@@ -28,7 +28,7 @@ def rdmatrix(size,start,end):
 # This function includes the matrix array's diagonal summation.
 # Takes as first argument the np.ndarray type and returns the INTEGER type.
 
-def diagsumMatrix(arr): 
+def sum(arr): 
     if type(arr) == np.ndarray: 
         diagonarr = arr.diagonal() # Basically uses the combination of diagonal and summation method.
         result = diagonarr.sum()
@@ -47,6 +47,6 @@ def diag(arr):
 # Debug codes:
 # myArray = rdmatrix(10,1,100)
 # print(myArray)
-# sum = diagsumMatrix(myArray)
-# print(sum)
+# sumOfMatrix = sum(myArray)
+# print(sumOfMatrix)
 # print(diag(myArray))
