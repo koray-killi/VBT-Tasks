@@ -25,7 +25,7 @@ def rdmatrix(size,start,end):
     else:
         return print("TypeError: Please enter valid types.") # Type Check
 
-# This function include the matrix array's diagonal summation.
+# This function includes the matrix array's diagonal summation.
 # Takes as first argument the np.ndarray type and returns the INTEGER type.
 
 def diagsumMatrix(arr): 
@@ -36,8 +36,17 @@ def diagsumMatrix(arr):
     else:
         return print("TypeError: Please enter a valid type.") # Type Check
 
+# This function returns the array that includes the given matrix's integer elements which has diagonal location.
+# Takes and returns 'np.ndarray' type.
+def diag(arr):
+    if type(arr) == np.ndarray:
+        return arr.diagonal()
+    else:
+        return print("TypeError: Please enter a valid type.")
+
 # Debug codes:
 # myArray = rdmatrix(10,1,100)
 # print(myArray)
 # sum = diagsumMatrix(myArray)
 # print(sum)
+# print(diag(myArray))
