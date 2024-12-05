@@ -1,4 +1,4 @@
-# Task ID : 1
+# Task ID : 0
 # The given task : Creating random 10x10 matrix and diagonal summation for this matrix.
 
 import numpy as np
