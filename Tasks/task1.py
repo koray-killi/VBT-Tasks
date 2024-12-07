@@ -21,16 +21,17 @@ print(table.isnull()) # Has no missing value.
 #print(table.isna()) - Same thing with upper one.
 '''
 '''
-print(table.mean()) # This ones gives..
-print(table.median()) # me some error..
-print(table.std())# I don't know why.
+# This ones gives error for Iris dataset.
+print(table.mean()) 
+print(table.median()) 
+print(table.std())
 
 # Çeyrekler (Quarters) : Each one of quarter divides the graph to 1/4.
 
-print(table.describe()) # It gives us to mean, std, min, max in one time.
+print(table.describe()) # It gives us to mean, std, min, max in one time - clearly.
 '''
 
-'''
+
 # Visualization with MatPlotLib
 species_colors = {"Iris-setosa": "red", "Iris-versicolor": "blue", "Iris-virginica": "green"}
 table["Color"] = table["Species"].map(species_colors)
@@ -52,4 +53,4 @@ plt.ylabel("Sepal Width (cm)")
 plt.legend()
 plt.grid(True)
 plt.show()
-'''
+
