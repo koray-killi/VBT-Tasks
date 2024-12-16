@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sb
 
-table = pd.read_csv('Data Science Community\VBT-Tasks\Tasks\Iris.csv')
+table = pd.read_csv('Iris.csv')
 
 '''
 table.info() # Get Info about the data set.
@@ -20,18 +20,19 @@ print(table.tail)
 print(table.isnull()) # Has no missing value.
 #print(table.isna()) - Same thing with upper one.
 '''
-'''
+
 # This ones gives error for Iris dataset.
-print(table.mean()) 
-print(table.median()) 
-print(table.std())
+# I fixed the problem, the function just got the numerics, not "str".
+print(table.select_dtypes(include=['number']).mean()) 
+print(table.select_dtypes(include=['number']).median()) 
+print(table.select_dtypes(include=['number']).std())
 
 # Çeyrekler (Quarters) : Each one of quarter divides the graph to 1/4.
 
 print(table.describe()) # It gives us to mean, std, min, max in one time - clearly.
-'''
 
 
+"""
 # Visualization with MatPlotLib
 species_colors = {"Iris-setosa": "red", "Iris-versicolor": "blue", "Iris-virginica": "green"}
 table["Color"] = table["Species"].map(species_colors)
@@ -54,3 +55,4 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
+"""
